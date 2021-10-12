@@ -4,14 +4,16 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _x$y$a$b = {
+let _x$y$a$b = {
   x: 1,
   y: 2,
   a: 3,
   b: 4
 },
-    x = _x$y$a$b.x,
-    y = _x$y$a$b.y,
+    {
+  x,
+  y
+} = _x$y$a$b,
     z = _objectWithoutProperties(_x$y$a$b, ["x", "y"]);
 
 console.log(x);
