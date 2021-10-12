@@ -11,6 +11,8 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    // 运行 npm run type-check 命令时，不生成文件，只做类型检查
+    "noEmit": true,
     "types": [
       "webpack-env"
     ],
