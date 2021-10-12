@@ -1,4 +1,2 @@
-let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-console.log(x);
-console.log(y);
-console.log(z);
+const a = [1, 2, 3, 4, 5];
+console.log(a.includes(7));
