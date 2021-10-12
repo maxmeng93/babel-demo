@@ -1,7 +1,9 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  // mode: 'production',
+  // mode: 'development',
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -13,13 +15,13 @@ module.exports = {
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue']
   },
-  // devServe: {
-  //   static: {
-  //     directory: path.join(__dirname, 'public'),
-  //   },
-  //   compress: true,
-  //   port: 9000,
-  // }
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    compress: true,
+    port: 9000,
+  },
   module: {
     rules: [{
       test: /.tsx?$/,
@@ -28,5 +30,10 @@ module.exports = {
       ]
     }]
   },
-  plugins: []
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'MaxMeng',
+      template: 'public/index.html'
+    })
+  ]
 }

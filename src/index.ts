@@ -13,8 +13,5 @@ console.log(x)
 console.log(y)
 console.log(z)
 
-const obj2 = { aa: 1, bb: 2, cc: 3, dd: 4 }
-const {aa, bb, ...zz} = obj2;
-console.log(aa)
-console.log(bb)
-console.log(zz)
+const app = document.getElementById('app');
+(app as HTMLElement).innerText = '这是一个网页';
