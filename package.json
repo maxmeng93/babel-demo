@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "npx babel ./index.js --out-file build.js"
+    "build": "npx babel ./index.js ./index2.js --out-file build.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
