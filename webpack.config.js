@@ -7,13 +7,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
   },
-  module: {
-    rules: [{
-      test: /.tsx?$/,
-      use: [
-        "babel-loader"
-      ]
-    }]
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, 'src'),
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue']
   },
   // devServe: {
   //   static: {
@@ -22,4 +20,13 @@ module.exports = {
   //   compress: true,
   //   port: 9000,
   // }
+  module: {
+    rules: [{
+      test: /.tsx?$/,
+      use: [
+        "babel-loader"
+      ]
+    }]
+  },
+  plugins: []
 }
