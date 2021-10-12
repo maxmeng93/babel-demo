@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "npx babel ./index.js --out-file build.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8"
   },
   "browserslist": [
-    "chrome 55"
+    "> 1%",
+    "last 2 versions",
+    "not dead"
   ]
 }
