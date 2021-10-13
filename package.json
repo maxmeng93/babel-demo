@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"npm run serve\" \"npm run type-check\"",
+    "start": "concurrently --raw \"npm:serve\" \"npm:type-check\"",
     "serve": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production",
-    "type-check": "tsc --watch"
+    "type-check": "tsc --watch",
+    "babel-build": "npx babel ./src/index.ts --out-file ./dist/babel-build.js"
   },
   "dependencies": {
     "core-js": "^3.18.2"
