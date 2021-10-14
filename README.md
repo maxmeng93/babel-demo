@@ -64,7 +64,7 @@ const webpackConfig = {
             loader: "cache-loader" // 缓存
           },
           {
-            loader: "thread-loader"
+            loader: "thread-loader" // 类似 happypack
           },
           {
             loader: "babel-loader"
